@@ -1,0 +1,17 @@
+{
+  "name": "rectangles",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "compare": "node index.mjs",
+    "help": "node lib/help.mjs",
+    "test": "node test/unit.mjs",
+    "draw": "node script/draw.mjs"
+  },
+  "author": "",
+  "license": "ISC"
+}
