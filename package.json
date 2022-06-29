@@ -9,8 +9,7 @@
   "scripts": {
     "compare": "node index.mjs",
     "help": "node lib/help.mjs",
-    "test": "node test/unit.mjs",
-    "draw": "node script/draw.mjs"
+    "test": "node test/unit.mjs"
   },
   "author": "",
   "license": "ISC"
