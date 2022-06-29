@@ -375,8 +375,8 @@ export const handleInput = (argsArray, verbose = true) => {
   }
   if (rect1.invalid || rect2.invalid) return false;
 
-  compareTwoRectangles(rect1, rect2, verbose);
-  makeDrawing && draw(rect1, rect2);
+  const results = compareTwoRectangles(rect1, rect2, verbose);
+  makeDrawing && draw(rect1, rect2, results);
   return true;
 };
 
