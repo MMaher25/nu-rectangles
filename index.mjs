@@ -194,17 +194,17 @@ export const findAdjacency = (rect1, rect2) => {
       rect1.vertices[3].x > rect2.vertices[0].x &&
       rect1.vertices[2].y === rect2.vertices[0].y;
     const leftInner =
-      rect1.vertices[3].x < rect2.vertices[3].x &&
-      rect1.vertices[0].x > rect2.vertices[3].x &&
-      rect1.vertices[3].x < rect2.vertices[0].x &&
-      rect1.vertices[0].x > rect2.vertices[0].x &&
-      rect1.vertices[3].y === rect2.vertices[3].y;
+      rect1.vertices[3].y > rect2.vertices[3].y &&
+      rect1.vertices[0].y < rect2.vertices[3].y &&
+      rect1.vertices[3].y > rect2.vertices[0].y &&
+      rect1.vertices[0].y < rect2.vertices[0].y &&
+      rect1.vertices[3].x === rect2.vertices[3].x;
     const leftOuter =
-      rect1.vertices[3].x < rect2.vertices[2].x &&
-      rect1.vertices[0].x > rect2.vertices[2].x &&
-      rect1.vertices[3].x < rect2.vertices[1].x &&
-      rect1.vertices[0].x > rect2.vertices[1].x &&
-      rect1.vertices[3].y === rect2.vertices[1].y;
+      rect1.vertices[3].y > rect2.vertices[2].y &&
+      rect1.vertices[0].y < rect2.vertices[2].y &&
+      rect1.vertices[3].y > rect2.vertices[1].y &&
+      rect1.vertices[0].y < rect2.vertices[1].y &&
+      rect1.vertices[3].x === rect2.vertices[1].x;
 
     return (
       topInner ||
