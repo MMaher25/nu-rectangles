@@ -2,8 +2,9 @@ import { promises as fs } from "fs";
 import { resolve } from "path";
 import { fileURLToPath } from "url";
 
-export const draw = async (rect1, rect2, {intersections}, scale = 10) => {
+export const draw = async (rect1, rect2, { intersections }, scale = 10) => {
   const overlap = [];
+
   if (intersections.length) {
     overlap.push(
       `ctx.moveTo(${intersections[0].x * scale}, ${
@@ -14,6 +15,7 @@ export const draw = async (rect1, rect2, {intersections}, scale = 10) => {
       overlap.push(`ctx.lineTo(${point.x * scale}, ${point.y * scale});`);
     });
   }
+
   const contentArray = [
     "<!DOCTYPE html>",
     "<html>",
